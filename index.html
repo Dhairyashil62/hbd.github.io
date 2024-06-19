@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sonalii!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #27eaf1, #c21eeb, #27eaf1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: linear-gradient(45deg, #1debeb, #1ef25a, #20e3f9);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #fff;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        .heart {
+            color: #f44336;
+        }
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .confetti {
+            position: absolute;
+            width: 5px;
+            height:8px;
+            background-color: pink;
+            opacity: 0.4;
+            border-radius: 50%;
+            animation: confetti-fall 3s ease-out infinite;
+            transform: translateY(-100vh);
+        }
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotateZ(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotateZ(360deg);
+            }
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            animation: fadeIn 1s ease-out;
+        }
+        img {
+            max-width: 50%;
+            height: fit-content;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="heart">&hearts;</span> Happy Birthday! <span class="heart">&hearts;</span></h1>
+        <p><b>My Dearest Sonalii..!!</b><br>
+        Wishing you a day filled with love, joy, and all the happiness in the world!<br>
+        "Happy Birthday to someone who has quickly become a bright light in my life! 🎉✨ Even though we've only known each other for a short time, 
+        I feel incredibly fortunate to have met someone as genuine and wonderful as you. Your warmth, humor, 
+        and kindness have already made a lasting impression on me. On your special day, I want you to know how much 
+        I appreciate our growing connection and look forward to getting to know you even better. Here's to more laughter, meaningful conversations,
+         and unforgettable moments together. May your birthday be as amazing as you are! Cheers to you🥳🎂!" <br>To my Dearest Sonaa..
+        <div class="confetti-container"></div>
+        <footer>Created with &hearts; by D</footer>
+    </div>
+
+    <script>
+        // Function to create confetti
+        function createConfetti() {
+            const confettiContainer = document.querySelector('.confetti-container');
+
+            // Number of confetti pieces
+            const numberOfConfetti = 50;
+
+            for (let i = 0; i < numberOfConfetti; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDelay = `${Math.random() * 4}s`;
+                confettiContainer.appendChild(confetti);
+            }
+        }
+
+        // Call the function to create confetti
+        createConfetti();
+    </script>
+</body>
+</html>
