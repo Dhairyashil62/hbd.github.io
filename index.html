@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HBD</title>
-    <!-- Link to Google Fonts for the "Dancing Script" font -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Love Letter</title>
+    <!-- Link to Google Fonts for "Great Vibes" -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>   
         body {
-            font-family: 'Dancing Script', cursive; /* Using the Dancing Script font for a more romantic feel */
+            font-family: 'Great Vibes', cursive; /* Using the Great Vibes font */
             background: linear-gradient(45deg, #f8c3d6, #f59ab3, #f57b8e);
             margin: 0;
             padding: 0;
@@ -28,106 +28,41 @@
             position: relative;
             animation: fadeIn 1s ease-out;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
         h1 {
             color: #fff;
             font-size: 3rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            animation: pulse 2s infinite alternate;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
         }
         p {
             font-size: 1.3rem;
             line-height: 1.8;
             color: #fff;
             margin-bottom: 30px;
-            animation: fadeIn 1s ease-out;
         }
         .heart {
             color: #f44336;
-        }
-        .confetti-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .confetti {
-            position: absolute;
-            width: 5px;
-            height:8px;
-            background-color: pink;
-            opacity: 0.4;
-            border-radius: 50%;
-            animation: confetti-fall 3s ease-out infinite;
-            transform: translateY(-100vh);
-        }
-        @keyframes confetti-fall {
-            0% {
-                transform: translateY(-100vh) rotateZ(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotateZ(360deg);
-            }
         }
         footer {
             margin-top: 20px;
             font-size: 0.9rem;
             color: #fff;
-            animation: fadeIn 1s ease-out;
-        }
-        img {
-            max-width: 50%;
-            height: fit-content;
-            margin-top: 20px;
-            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-    <h1><span class="heart">&hearts;</span>!!..MY SPECIAL ONE..!!<span class="heart">&hearts;</span></h1>
-    <p><b>My Dearest Sonalii..!!</b><br>
-        Sonali, even though we’ve never met in person, I feel an undeniable connection with you that grows stronger every day. 
-        Every conversation, every word we share feels so genuine and meaningful. 
-        You’ve brought a light into my life that I didn’t know I was missing. The more we talk, the more I realize how much you mean to me. 
-        You’ve become such an important part of my world, and my feelings for you deepen with each passing moment. 
-        !!..You are so special to me, Sonali, and I truly believe we’re on a path that’s meant to be..!!<br>
-        To my Dearest Sonaa..<br>
-        <b> !!..I LOVE YOU SONULI❤️..!!</b>
-    </p>
-    <div class="confetti-container"></div>
-    <footer>Created with &hearts; by Dhairya</footer>
-</div>
-
-    <script>
-        // Function to create confetti
-        function createConfetti() {
-            const confettiContainer = document.querySelector('.confetti-container');
-
-            // Number of confetti pieces
-            const numberOfConfetti = 50;
-
-            for (let i = 0; i < numberOfConfetti; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = `${Math.random() * 100}%`;
-                confetti.style.animationDelay = `${Math.random() * 4}s`;
-                confettiContainer.appendChild(confetti);
-            }
-        }
-
-        // Call the function to create confetti
-        createConfetti();
-    </script>
+        <h1><span class="heart">&hearts;</span>!!..MY SPECIAL ONE..!!<span class="heart">&hearts;</span></h1>
+        <p><b>My Dearest Sonalii..!!</b><br>
+            Sonali, even though we’ve never met in person, I feel an undeniable connection with you that grows stronger every day. 
+            Every conversation, every word we share feels so genuine and meaningful. 
+            You’ve brought a light into my life that I didn’t know I was missing. The more we talk, the more I realize how much you mean to me. 
+            You’ve become such an important part of my world, and my feelings for you deepen with each passing moment. 
+            !!..You are so special to me, Sonali, and I truly believe we’re on a path that’s meant to be..!!<br>
+            To my Dearest Sonaa..<br>
+            <b> !!..I LOVE YOU SONULI❤️..!!</b>
+        </p>
+        <footer>Created with &hearts; by Dhairya</footer>
+    </div>
 </body>
 </html>
